@@ -37,7 +37,7 @@ const Tables = () => {
 
   const handleDeleteTable = async (id) => {
     try {
-      const res = await axios.delete(https://resturant-app-ss.onrender.com/api/food/tables/${id}`);
+      const res = await axios.delete("https://resturant-app-ss.onrender.com/api/food/tables/${id}");
       if (res.status === 200) {
         fetchTables(); // Refresh after deletion
       }
