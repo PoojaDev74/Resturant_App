@@ -1,4 +1,4 @@
-// src/components/Tables/Tables.jsx
+
 import React, { useState, useEffect } from "react";
 import "./Tables.css";
 import axios from "axios";
@@ -12,7 +12,7 @@ const Tables = () => {
 
   const fetchTables = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/food/tables");
+      const res = await axios.get("https://resturant-app-ss.onrender.com/api/food/tables");
       setTables(res.data);
     } catch (err) {
       console.error("Failed to fetch tables:", err);
@@ -21,7 +21,7 @@ const Tables = () => {
 
   const handleCreateTable = async () => {
     try {
-      const res = await axios.post("http://localhost:4000/api/food/tables", {
+      const res = await axios.post("https://resturant-app-ss.onrender.com/api/food/tables", {
         tableNumber: newTable.chairs,
       });
 
@@ -37,7 +37,7 @@ const Tables = () => {
 
   const handleDeleteTable = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4000/api/food/tables/${id}`);
+      const res = await axios.delete(https://resturant-app-ss.onrender.com/api/food/tables/${id}`);
       if (res.status === 200) {
         fetchTables(); // Refresh after deletion
       }
