@@ -78,11 +78,11 @@ import pasta7 from "./pasta7.png";
 
 
 export const assets = {
+  resturant_logo,
   basket_icon,
   search_icon,
   add_icon_green,
   add_icon_white,
-  resturant_logo,
   remove_icon_red,
   cross_icon,
   burger_logo,
