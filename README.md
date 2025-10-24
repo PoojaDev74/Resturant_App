@@ -62,7 +62,7 @@ Backend API: (https://resturant-app-ss.onrender.com)
 
 ### 🔹 Clone the Repository
 ```bash
-git clone https://github.com/PoojaDev74/Food-Delivery-App.git
+git clone (https://github.com/PoojaDev74/Resturant_App.git)
 
 Backend setup
 cd server
