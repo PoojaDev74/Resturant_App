@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideBar.css";
 import { NavLink } from "react-router-dom";
-import logo from "../../assests/resturant-logo.png";
+import logo from "../../assests/restaurant-logo.png";
 const SideBar = () => {
   return (
     <header id="header" className="header">
