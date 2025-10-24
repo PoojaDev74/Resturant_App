@@ -1,0 +1,90 @@
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive & evenly spaced */
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #f0f5f3;
+  border-radius: 10px;
+  border: 1.5px solid #d9d9d9;
+  height: 110px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 25px;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rev{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+    color: #333;
+    gap: 0px;
+}
+.val{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+
+}
+
+.icon {
+  font-size: 22px;
+  color: #1a1a1a;
+  width: 50px;
+  height: 50px;
+  background-color: #e0efff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.name {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+}
+
+@media (max-width: 1024px) {
+  .analytics-cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .analytics-cards {
+    grid-template-columns: 1fr;
+  }
+}
+

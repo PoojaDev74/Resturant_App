@@ -1,0 +1,78 @@
+.tables-status-card {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #dbd9d9;
+  padding: 20px;
+  margin: 10px;
+  color: #7a7a7a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tables-status-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tables-status-card h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 8px;
+}
+
+.tables-grid .table {
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #555;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.tables-grid .table.available-bg {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.tables-grid .table.reserved-bg {
+  background-color: #3dc35f;
+  color: #000000;
+}
+.counts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.availableColor {
+  width: 9px;
+  height: 9px;
+  background-color: rgb(233, 232, 232);
+  border-radius: 50%;
+}
+
+.reservedColor {
+  width: 9px;
+  height: 9px;
+  background-color: #3dc35f;
+  border-radius: 50%;
+}

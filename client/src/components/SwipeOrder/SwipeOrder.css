@@ -1,0 +1,68 @@
+.swipeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.swipe-button {
+    background-color: #D9D9D9; 
+    border-radius: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden; 
+    cursor: grab; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+
+
+.swipe-button .circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    margin: 5px;
+    transition: box-shadow 0.2s ease; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.swipe-button .arrow-icon {
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    
+}
+
+.swipe-button .swipe-text {
+    flex-grow: 1;
+    color: #949494;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    padding-left: 20px;
+}
+
+.swipe-button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.swipe-button.active {
+  opacity: 1;
+  pointer-events: auto;
+}

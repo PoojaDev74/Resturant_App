@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+body {
+  background-color: #f2f3f4;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Main Home Container (centered mobile layout) --- */
+.home {
+  width: 100%;
+  max-width: 430px; /* iPhone 13 Pro Max width */
+  background: #ffffff;
+  border-radius: 25px;
+  min-height: 100vh;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+/* Blur background when user form is open */
+.blurred {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.4s ease;
+}
+
+
+/* --- Welcome Banner --- */
+.welcomeBanner {
+  padding: 20px 24px 10px 24px;
+  text-align: left;
+}
+
+.welcomeBanner h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.welcomeBanner p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+/* --- Searchbar Alignment --- */
+.searchbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+/* --- Menu Section --- */
+.menu-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 8px 18px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.menu-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Menu Button Box --- */
+.menu-box {
+  height: 60px;
+  width: 60px;
+  background-color: #f5f6f7;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-box.active {
+  background-color: #3a3a3a;
+  border-color: #3a3a3a;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-box.active img {
+  filter: brightness(0) invert(1);
+}
+
+.menu-box.active p {
+  color: white;
+}
+
+.menu-box img {
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+  margin-bottom: 3px;
+}
+
+.menu-box p {
+  font-size: 11.5px;
+  color: #333;
+  margin: 0;
+}
+
+/* --- Item Display Grid --- */
+.item-display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 0 18px;
+  margin-top: 18px;
+}
+
+/* --- Item Card --- */
+.item-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-3px);
+}
+
+.item-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+
+.item-card .item-info {
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.item-card .item-info h3 {
+  font-weight: 600;
+  font-size: 13.5px;
+  margin: 2px 0 4px 0;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-card .item-info h5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+/* --- “+” Button / Counter --- */
+.add-btn {
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 1px 8px;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #333;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+.counter button {
+  border: none;
+  background: #000;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.counter button:hover {
+  background: #333;
+}
+
+/* --- “Next” Button (Fixed Bottom) --- */
+.next-button {
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.next {
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.next:hover {
+  background-color: #2d2d2d;
+}
+
+/* --- Desktop Center Alignment --- */
+@media (min-width: 768px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .home {
+    margin: 30px auto;
+  }
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 500px) {
+  .home {
+    border-radius: 0;
+    box-shadow: none;
+    padding-bottom: 80px;
+  }
+
+  .item-card img {
+    height: 110px;
+  }
+
+  .item-info h3 {
+    font-size: 13px;
+  }
+
+  .next {
+    width: 80%;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+}
