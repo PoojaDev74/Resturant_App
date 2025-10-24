@@ -2,65 +2,61 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: row;
-  gap: 14px;
+  gap: 16px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 10px 12px;
+  padding: 14px 12px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Hide for Firefox */
-  max-width: 430px; /* ✅ keeps menu inside your iPhone-style container */
-  margin: 0 auto; /* ✅ center on larger screens */
+  scrollbar-width: none;
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
+  background-color: #fff; 
+  border-radius: 8px;
 }
 
 .menu-box::-webkit-scrollbar {
-  display: none; /* ✅ hide scrollbar completely */
+  display: none; 
 }
 
-/* Category box */
 .single-box {
-  height: 65px;
-  width: 65px;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  height: 80px;
+  width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f5f7fa;
-  border: 1px solid #c2c2c2;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
 .single-box img {
-  height: 26px;
-  width: 26px;
+  height: 32px;
+  width: 32px;
   object-fit: contain;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
 }
 
 .single-box p {
-  font-size: 12px;
+  font-size: 13px;
   color: #333;
   margin: 0;
   text-align: center;
   white-space: nowrap;
 }
 
-/* Hover & Active effects */
-.single-box:hover {
-  transform: scale(1.05);
-}
-
+/* ✅ Active (selected) category */
 .single-box.active {
-  background-color: #3a3a3a;
-  border-color: #3a3a3a;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  transform: scale(1.07);
+  background-color: #2f2f2f;
+  border-color: #2f2f2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.06);
 }
 
 .single-box.active img {
@@ -68,28 +64,30 @@
 }
 
 .single-box.active p {
-  color: white;
+  color: #fff;
 }
 
-/* ✅ Mobile Adjustments */
-@media (max-width: 500px) {
+.single-box:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
   .menu-box {
-    max-width: 100%;
-    padding: 10px 8px;
     gap: 12px;
+    padding: 10px 8px;
   }
 
   .single-box {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
   }
 
   .single-box img {
-    height: 24px;
-    width: 24px;
+    height: 26px;
+    width: 26px;
   }
 
   .single-box p {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
