@@ -3,8 +3,9 @@ import { menu_list } from "../../assests/assets";
 import "./Menu.css";
 
 const Menu = ({ onCategoryClick, activeCategory }) => {
+  const scrollRef = useRef(null);
   return (
-    <div className="menu-box">
+    <div className="menu-box" ref={scrollRef}>
       {menu_list.map((item, index) => {
         return (
           <div
