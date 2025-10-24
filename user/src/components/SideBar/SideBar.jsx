@@ -1,8 +1,12 @@
 import React from "react";
 import "./SideBar.css";
 import { NavLink } from "react-router-dom";
+<<<<<<< HEAD
 import assets from "../../assests/assets";
 const { resturant_logo } = assets; 
+=======
+import logo from "../../assets/resturant-logo.png";
+>>>>>>> 324775a (Fix: rename assests folder to assets)
 const SideBar = () => {
   return (
     <header id="header" className="header">

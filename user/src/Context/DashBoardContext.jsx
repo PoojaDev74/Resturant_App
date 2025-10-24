@@ -1,6 +1,6 @@
 
 import React, { createContext, useEffect, useState } from "react";
-import { food_list, menu_list } from "../assests/assets";
+import { food_list, menu_list } from "../assets/assets";
 export const DashboardContext = createContext();
 
 export const DashboardProvider = ({ children }) => {

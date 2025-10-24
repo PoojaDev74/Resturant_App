@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { menu_list, food_list } from "../../assests/assets";
+import { menu_list, food_list } from "../../assets/assets";
 import "./OrderItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

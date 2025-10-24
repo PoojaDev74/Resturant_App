@@ -1,7 +1,7 @@
 
 import React, { createContext, useState, useEffect, useContext } from "react";
 import { DashboardContext } from "./DashBoardContext";
-import { food_list, menu_list } from "../assests/assets";
+import { food_list, menu_list } from "../assets/assets";
 
 
 export const TableContext = createContext(null);
