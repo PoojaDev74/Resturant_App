@@ -111,7 +111,7 @@ export const DashboardProvider = ({ children }) => {
   useEffect(() => {
     setLoading(true);
     Promise.all([
-      fetch("http://localhost:4000/api/food/orders")
+      fetch("https://resturant-app-ss.onrender.com/api/food/orders")
         .then((res) => res.json())
         .then((data) => {
           if (Array.isArray(data)) {
@@ -124,7 +124,7 @@ export const DashboardProvider = ({ children }) => {
             return [];
           }
         }),
-      fetch("http://localhost:4000/api/food")
+      fetch("https://resturant-app-ss.onrender.com/api/food")
         .then((res) => res.json())
         .then((data) => {
           if (Array.isArray(data)) {
