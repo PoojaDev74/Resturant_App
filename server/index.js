@@ -11,6 +11,7 @@ const app = express();
 
 const allowedOrigins = [
   "https://resturant-app-kappa.vercel.app",
+  "https://resturant-app-ipbd.vercel.app",
   "http://localhost:3000",
   "http://localhost:3001",
   "http://localhost:3002",
