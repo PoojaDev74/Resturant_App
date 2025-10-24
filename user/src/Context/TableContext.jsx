@@ -6,7 +6,6 @@ import { food_list, menu_list } from "../assests/assets";
 
 export const TableContext = createContext(null);
 
-// Create a provider component
 export const TableProvider = ({ children }) => {
   const { orders, loading } = useContext(DashboardContext);
 
@@ -47,20 +46,18 @@ export const TableProvider = ({ children }) => {
 
   const fetchTables = async () => {
     try {
-      const res = await fetch("http://localhost:4000/api/food/tables");
+      const res = await fetch("https://resturant-app-ss.onrender.com/api/food/tables");
       const data = await res.json();
 
       const updated = data.map((table) => {
         const existing = tables.find((t) => t._id === table._id);
         if (existing && existing.manualOverride) {
-          // Keep manually toggled status
           return existing;
         }
         return { ...table, status: "available" };
       });
 
 
-      // Update status based on orders
       orders.forEach((order) => {
         if (order.orderType === "Dine In" && order.table) {
           const tableNumber = parseInt(order.table);
