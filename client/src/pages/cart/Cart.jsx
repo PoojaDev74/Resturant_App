@@ -10,7 +10,6 @@ import axios from "axios";
 
 
 const Cart = () => {
-  const url = "http://localhost:4000/api/food";
 
   const [tableNumber, setTableNumber] = useState("");
   const { cart, food_list, removeFromCart, totalCartAmount } =
@@ -23,7 +22,6 @@ const Cart = () => {
 
   const sendOrderToBackend = async () => {
     try {
-      // Prepare order details
       const createOrder = {
         items: Object.entries(cart).map(([itemId, quantity]) => {
           const item = food_list.find((food) => food._id === itemId);
@@ -49,7 +47,7 @@ const Cart = () => {
 
       // Post data to backend
       const response = await axios.post(
-        `http://localhost:4000/api/food/orders/create`,
+        `https://resturant-app-ss.onrender.com/api/food/orders/create`,
         createOrder
       );
       console.log("Order response:", response.data);
@@ -234,9 +232,7 @@ const Cart = () => {
                 >
                   Edit Details
                 </button>
-
               </>
-
             );
           })()}
         </div>
@@ -251,7 +247,6 @@ const Cart = () => {
             setSwiped={() => console.log("Order Swiped!")}
           />
         )}
-
       </div>
     </>
   );
