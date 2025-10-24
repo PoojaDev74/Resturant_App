@@ -1,14 +1,14 @@
 import React from "react";
 import "./SideBar.css";
 import { NavLink } from "react-router-dom";
-import logo from "../../assests/restaurant-logo.png";
+import resturant-logo from "../../assests/assets";
 const SideBar = () => {
   return (
     <header id="header" className="header">
       <div className="menuItem1">
         <div className="iconCircle1">
           <img
-            src={logo}
+            src={resturant-logo}
             alt="Resturant-Logo"
             className="sidebar-logo"
           />
