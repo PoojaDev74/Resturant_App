@@ -3,7 +3,6 @@ import "./MenuItems.css";
 import axios from "axios";
 
 const MenuItems = () => {
-  // const url = "http://localhost:4000";
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
@@ -28,7 +27,7 @@ const MenuItems = () => {
     dataForm.append("image", image);
 
     try {
-      const res = await axios.post(`http://localhost:4000/api/food/add`, dataForm);
+      const res = await axios.post(`https://resturant-app-ss.onrender.com/api/food/add`, dataForm);
 
       if (res.data.success) {
         setData({
@@ -51,7 +50,7 @@ const MenuItems = () => {
   const [list, setList] = useState([]);
 
   const fetchList = async () => {
-    const res = await axios.get(`http://localhost:4000/api/food/list`);
+    const res = await axios.get(`https://resturant-app-ss.onrender.com/api/food/list`);
     if (res.data.success) {
       setList(res.data.data);
     } else {
@@ -60,7 +59,7 @@ const MenuItems = () => {
   };
   const deleteItem = async (foodId) => {
     console.log(foodId);
-    const res = await axios.post(`http://localhost:4000/api/food/delete`, { id: foodId });
+    const res = await axios.post(`https://resturant-app-ss.onrender.com/api/food/delete`, { id: foodId });
     await fetchList();
     if (res.data.success) {
       alert("Item deleted successfully!");
