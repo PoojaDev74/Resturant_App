@@ -2,7 +2,7 @@ import basket_icon from "./basket_icon.png";
 import search_icon from "./search_icon.png";
 import add_icon_white from "./add_icon_white.png";
 import add_icon_green from "./add_icon_green.png";
-import resturant_logo from "./resturant_logo.png";
+
 import remove_icon_red from "./remove_icon_red.png";
 import cross_icon from "./cross_icon.png";
 
@@ -82,7 +82,7 @@ export const assets = {
   search_icon,
   add_icon_green,
   add_icon_white,
-  resturant_logo,
+
   remove_icon_red,
   cross_icon,
   burger_logo,
