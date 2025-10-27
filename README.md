@@ -3,7 +3,7 @@
 ## 📌 Description
 A full-stack *Resturant_Food Delivery Web Application* built using the *MERN stack* (MongoDB, Express.js, React.js, Node.js).  
 This application allows users to *browse menus, add items to the cart, place food orders, and track order status* in real-time.  
-It also includes an *Admin Dashboard* for managing restaurants, menu items, and orders efficiently.
+It also includes an *User Dashboard* for managing restaurants, menu items, and orders efficiently.
 
 ---
 
@@ -15,7 +15,7 @@ It also includes an *Admin Dashboard* for managing restaurants, menu items, and 
 - Track live order status and view order history  
 - Secure login, signup, and JWT-based authentication  
 
-### 🧑‍💼  Dashboard
+### 🧑‍💼 User Dashboard
 - Add, edit, or delete restaurants and menu items  
 - Manage customer orders and update order statuses  
 - Dashboard view for overall sales and order statistics  
