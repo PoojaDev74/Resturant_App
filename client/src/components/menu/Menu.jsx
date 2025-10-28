@@ -5,6 +5,7 @@ import "./Menu.css";
 const Menu = ({ onCategoryClick, activeCategory }) => {
   const scrollRef = useRef(null);
   return (
+    <div className="menu-container">
     <div className="menu-box" ref={scrollRef}>
       {menu_list.map((item, index) => {
         return (
@@ -20,6 +21,7 @@ const Menu = ({ onCategoryClick, activeCategory }) => {
           </div>
         );
       })}
+    </div>
     </div>
   );
 };
