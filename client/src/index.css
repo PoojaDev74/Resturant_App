@@ -23,7 +23,7 @@ a{
 
 .app {
   width: 100%;
-  max-width: 430px;
+  /* max-width: 430px; */
   min-height: 100vh;
   background-color: #ffffff;
   border-radius: 30px;
