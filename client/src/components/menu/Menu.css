@@ -1,3 +1,10 @@
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .menu-box {
   display: flex;
   flex-wrap: nowrap;          
