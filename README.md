@@ -43,7 +43,7 @@ It also includes an *User Dashboard* for managing restaurants, menu items, and o
 | *Backend* | Node.js, Express.js |
 | *Database* | MongoDB |
 | *Authentication* | JWT, bcrypt |
-| *Deployment* | Render (Backend),Vercel(Frontend & Admin) |
+| *Deployment* | Render (server),Vercel(Client & User) |
 | *Tools* | Postman, Git, GitHub, VS Code |
 
 ---
