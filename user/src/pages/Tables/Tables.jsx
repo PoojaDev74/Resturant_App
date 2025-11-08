@@ -35,16 +35,16 @@ const Tables = () => {
     }
   };
 
-  const handleDeleteTable = async (id) => {
-    try {
-      const res = await axios.delete("https://resturant-app-ss.onrender.com/api/food/tables/${id}");
-      if (res.status === 200) {
-        fetchTables(); // Refresh after deletion
-      }
-    } catch (error) {
-      console.error("Failed to delete table:", error);
+const handleDeleteTable = async (id) => {
+  try {
+    const res = await axios.delete(`https://resturant-app-ss.onrender.com/api/food/tables/${id}`);
+    if (res.status === 200) {
+      fetchTables();
     }
-  };
+  } catch (error) {
+    console.error("Failed to delete table:", error);
+  }
+};
 
   useEffect(() => {
     fetchTables();
